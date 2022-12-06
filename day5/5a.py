@@ -18,7 +18,6 @@ for line in crates:
 # Parse Instructions
 for line in instructions:
     num, from_stack, to_stack = map(int, re.findall('\d+', line))
-    # stacks[from_stack], stacks[to_stack] = stacks[from_stack][num:],  stacks[from_stack][:num][::-1] + stacks[to_stack]
     stacks[to_stack] = stacks[from_stack][:num][::-1] + stacks[to_stack]
     stacks[from_stack] = stacks[from_stack][num:]
     
