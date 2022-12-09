@@ -23,7 +23,3 @@ for line in instructions:
     
 
 print("".join([stacks[key][0] for key in sorted(stacks)]))
-
-
-
-
